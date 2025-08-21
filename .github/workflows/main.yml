@@ -45,23 +45,23 @@ jobs:
       - name: Install Haxelib
         run: |
           haxelib setup ~/haxelib
-          haxelib --quiet install hxcpp 4.2.1 > /dev/null
-          haxelib --quiet install lime 8.0.2
-          haxelib --quiet install openfl 9.2.1
-          haxelib --quiet install flixel
-          haxelib --quiet run lime setup flixel
-          haxelib --quiet install flixel-tools
-          haxelib --quiet install flixel-ui
-          haxelib --quiet install flixel-addons
-          haxelib --quiet install tjson
-          haxelib --quiet install hxjsonast
-          haxelib --quiet install hscript
-          haxelib --quiet git SScript https://github.com/Fearester2008/SScript
-          haxelib --quiet git hxCodec https://github.com/SPLCoding/hxCodec-but-it-works-xd.git
-          haxelib --quiet git linc_luajit https://github.com/PsychExtendedThings/linc_luajit.git
-          haxelib --quiet git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools
-          haxelib --quiet git AndroidDialogs https://github.com/beihu235/AndroidDialogs
-          haxelib --quiet git devicelanguage https://github.com/beihu235/devicelanguage
+          haxelib install hxcpp 4.2.1 > /dev/null --quiet
+          haxelib install lime 8.0.2 --quiet
+          haxelib install openfl 9.2.2 --quiet
+          haxelib install flixel --quite
+          haxelib run lime setup flixel --quiet
+          haxelib install flixel-tools --quiet
+          haxelib install flixel-ui --quiet
+          haxelib install flixel-addons --quiet
+          haxelib install tjson --quiet
+          haxelib install hxjsonast --quiet
+          haxelib install hscript --quiet
+          haxelib git SScript https://github.com/Fearester2008/SScript --quiet
+          haxelib git hxCodec https://github.com/SPLCoding/hxCodec-but-it-works-xd.git --quiet
+          haxelib git linc_luajit https://github.com/PsychExtendedThings/linc_luajit.git --quiet
+          haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools --quiet
+          haxelib git AndroidDialogs https://github.com/beihu235/AndroidDialogs --quiet
+          haxelib git devicelanguage https://github.com/beihu235/devicelanguage --quiet
           haxelib list
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
